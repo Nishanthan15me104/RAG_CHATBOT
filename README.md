@@ -11,9 +11,7 @@ This module houses the central intelligence and decision-making logic of the sys
 * `agent_core/`
     * `langgraph_flow.py`: Defines the **Finite State Machine (FSM)** and conditional routing logic using LangGraph.
     * `multi_agent_router.py`: Logic for coordinating actions between specialized agents (e.g., Planner, Retriever).
-    * `prompts/`
-        * `persona_plato.txt`: Optimized system prompt for the Plato persona.
-        * `persona_turing.txt`: Optimized system prompt for the Turing persona.
+
 
 ---
 
@@ -36,7 +34,6 @@ The layer responsible for hosting the agent and exposing it as a scalable servic
 
 * `backend_service/`
     * `main.py`: **FastAPI** application defining **RESTful API** endpoints.
-    * `websocket_manager.py`: Implementation of **WebSockets** for streaming real-time responses.
     * `Dockerfile`: Configuration file for **Docker** containerization.
     * `docker-compose.yml`: Orchestration file for managing service dependencies.
 
@@ -71,8 +68,4 @@ Centralized configuration for external services and modern development practices
 Ensures ongoing quality, performance, and maintainability.
 
 * `llmops/`
-    * `evaluation_pipeline.py`: Scripts for **automated agent evaluation** (metrics like faithfulness, relevance).
-    * `prompt_version_tracker.py`: System for tracking and managing prompt changes.
-    * `datasets/`
-        * `eval_dataset_v1.json`: Versioned **evaluation dataset** (synthetic and real-world queries).
-        * `golden_answers.json`: Defined expected outcomes for benchmarking.
+Observability for RAG agents (part of LLMOps): evaluating agents, prompt monitoring, prompt versioning, etc. - which is done by using comet ml opik
