@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     GROQ_LLM_MODEL: str = "llama-3.3-70b-versatile"
     GROQ_LLM_MODEL_CONTEXT_SUMMARY: str = "llama-3.1-8b-instant"
     
+    
     # --- OpenAI Configuration (Required for evaluation) ---
     OPENAI_API_KEY: Optional[str] = None # Set to None for local dev
 
